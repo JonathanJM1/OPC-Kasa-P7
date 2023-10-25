@@ -1,0 +1,33 @@
+.error {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-block: 100px;
+    color: $color-piment;
+    @include mobile-only {
+        margin-top: 80px;
+    }
+    &__title {
+        font-size: 16rem;
+        font-weight: bold;
+        margin: 0px;
+        @include mobile-only {
+            font-size: 6rem;
+        }
+    }
+    &__subtitle {
+        font-size: 2rem;
+        margin-block: 60px;
+        @include mobile-only {
+            font-size: 1rem;
+            text-align: center;
+            margin-block: 30px;
+        }
+    }
+    &__link {
+        text-decoration: underline $color-piment;
+        margin-top: 150px;
+        color: $color-piment;
+    }
+}

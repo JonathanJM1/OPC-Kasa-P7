@@ -1,0 +1,120 @@
+.ficheLogement {
+    display: flex;
+    flex-direction: column;
+    color: $color-piment;
+    // grid-template-columns: 1fr 1fr;
+    & ul {
+        justify-content: flex-start;
+    }
+    & h1 {
+        margin: 0px;
+    }
+    & h4 {
+        margin-block: 5px;
+    }
+
+    & p {
+        margin: 0px;
+    }
+    &__index {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 40px;
+        grid-column: -1/1;
+        @include mobile-only {
+            flex-direction: column;
+            padding-top: 20px;
+        }
+    }
+
+    &__data {
+        padding-block: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+        @include mobile-only {
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+        @include tablette-only {
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+    }
+    &__host {
+        padding-left: 20px;
+        @include mobile-only {
+            display: flex;
+            flex-direction: row-reverse;
+            padding-left: 0px;
+            justify-content: space-between;
+            align-items: flex-end;
+            padding-block: 5px;
+        }
+        &__data {
+            display: flex;
+            justify-content: flex-end;
+        }
+        &__name {
+            display: flex;
+            align-items: flex-end;
+            flex-direction: column;
+            justify-content: center;
+            padding-right: 20px;
+            @include mobile-only {
+                padding-right: 10px;
+                font-size: 12px;
+            }
+        }
+    }
+    &__tags {
+        background-color: $color-piment;
+        border-radius: 15px;
+        color: $color-white;
+        padding-block: 5px;
+        padding-inline: 15px;
+        margin-right: 10px;
+        text-align: center;
+        font-size: 0.8rem;
+        @include mobile-only {
+            font-size: 0.7rem;
+        }
+    }
+    &__hostpic {
+        border-radius: 100px;
+        height: 64px;
+        width: 64px;
+        @include mobile-only {
+            height: 32px;
+            width: 32px;
+        }
+    }
+    & i {
+        width: 36px;
+    }
+    & li {
+        margin: 5px;
+    }
+    &__link {
+        margin-top: 100px;
+    }
+    &__starRating {
+        @include mobile-only {
+            height: 18px;
+            display: flex;
+            align-items: flex-end;
+        }
+    }
+}
+
+.ficheLogement > :nth-child(1) {
+    grid-column: -1 /1;
+}
+
+.ficheLogement > :nth-child(3) {
+    grid-column: -1 /1;
+}
+
+.rating {
+    color: rgb(215, 215, 215);
+}

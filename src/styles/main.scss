@@ -1,0 +1,25 @@
+/*Import utils CSS*/
+@import "./utils/variables";
+@import "./utils/maps";
+@import "./utils/mixins";
+
+/*Import bases CSS*/
+@import "./base/base";
+@import "./base/typography";
+
+/*Import components CSS*/
+@import "./components/animations";
+
+/*Import layout CSS*/
+@import "./layout/nav";
+@import "./layout/header";
+@import "./layout/banner";
+@import "./layout/cards";
+@import "./layout/collapses";
+@import "./layout/error";
+@import "./layout/slides";
+@import "./layout/footer";
+
+/*Import pages CSS*/
+@import "./pages/about";
+@import "./pages/fichelogement";

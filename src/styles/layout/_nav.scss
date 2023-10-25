@@ -1,0 +1,49 @@
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__img {
+        max-width: 210px;
+        max-width: 145px;
+    }
+    &__link {
+        display: flex;
+        color: $color-piment;
+        margin-left: auto;
+        gap: 50px;
+        @include mobile-only {
+            gap: 20px;
+        }
+
+        &__item {
+            position: relative;
+            &::after {
+                content: "";
+                position: absolute;
+                background-color: $color-piment;
+                height: 2px;
+                width: 0%;
+                bottom: 0;
+                left: 0;
+                transition: all 0.5s ease-in;
+                @include mobile-only {
+                    height: 1px;
+                }
+            }
+            &:hover::after {
+                width: 100%;
+            }
+            @include mobile-only {
+                text-transform: uppercase;
+                font-size: 0.8rem;
+            }
+        }
+        & ul {
+            margin-left: auto;
+        }
+        &__active::after {
+            width: 100%;
+        }
+    }
+}

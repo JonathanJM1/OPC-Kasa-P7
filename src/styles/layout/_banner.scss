@@ -1,0 +1,65 @@
+.banner {
+    border-radius: 25px;
+    position: relative;
+    &__homeimg {
+        background: url("../../assets/backhead.png") center/cover;
+        border-radius: 25px;
+        height: 111px;
+        width: 100%;
+        &::before {
+            content: "";
+            background-color: black;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0%;
+            border-radius: 25px;
+            opacity: 0.3;
+            z-index: 1;
+        }
+        @include desktop-only {
+            height: 223px;
+            justify-content: center;
+        }
+
+        @include tablette-only {
+            height: 200px;
+        }
+    }
+    &__title {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: $color-white;
+        width: 100%;
+        text-align: center;
+        z-index: 2;
+        @include mobile-only {
+            text-align: left;
+            padding-left: 20px;
+        }
+    }
+    &__aboutimg {
+        background: url("../../assets/aboutban.png") center/cover;
+        border-radius: 25px;
+        height: 223px;
+        width: 100%;
+        opacity: 80%;
+        @include desktop-only {
+            justify-content: center;
+        }
+        &::before {
+            content: "";
+            background-color: black;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0%;
+            border-radius: 25px;
+            opacity: 0.3;
+            z-index: 1;
+        }
+    }
+}

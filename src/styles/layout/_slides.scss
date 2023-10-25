@@ -1,0 +1,84 @@
+.slidecontainer {
+    position: relative;
+    color: $color-white;
+    border-radius: 20px;
+    width: 100%;
+    height: 415px;
+    overflow: hidden;
+    display: flex;
+    @include mobile-only {
+        height: 255px;
+    }
+    @include tablette-only {
+        height: 300px;
+    }
+
+    &__arrowleft {
+        position: absolute;
+        top: 45%;
+        left: 2%;
+        cursor: pointer;
+        @include mobile-only {
+            height: 24px;
+        }
+    }
+    &__rightArrow {
+        position: absolute;
+        top: 45%;
+        right: 2%;
+        cursor: pointer;
+        @include mobile-only {
+            height: 24px;
+        }
+    }
+    &__noArrow {
+        display: none;
+    }
+    & ul {
+        position: absolute;
+        bottom: 5%;
+        right: 42%;
+        color: $color-white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-block: 0px;
+        padding: 0px;
+        @include mobile-only {
+            right: 30%;
+            margin: 0px;
+        }
+    }
+    & li {
+        font-size: 1.5em;
+        padding: 0.1rem;
+        @include mobile-only {
+            font-size: 1em;
+        }
+        @include tablette-only {
+            font-size: 1.5em;
+        }
+    }
+    &__bullet {
+        opacity: 50%;
+        &__active {
+            opacity: 100%;
+        }
+    }
+    &__element {
+        position: absolute;
+        border-radius: 10px;
+        height: 100%;
+        width: 100%;
+        white-space: nowrap;
+        transition: 1s ease;
+        & img {
+            overflow-clip-margin: content-box;
+            overflow: clip;
+            display: inline-block;
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
+    }
+}

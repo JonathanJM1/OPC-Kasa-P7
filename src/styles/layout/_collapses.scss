@@ -1,0 +1,43 @@
+.collapse {
+    margin-bottom: 25px;
+    @include desktop-only {
+        font-size: 24px;
+    }
+
+    &__title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        background-color: $color-piment;
+        border-radius: 5px;
+        color: $color-white;
+    }
+    &__content {
+        background-color: $color-gray;
+        border-radius: 5px;
+        color: $color-piment;
+
+        @include mobile-only {
+            padding-bottom: 60px;
+        }
+        animation: collapsein 0.5s linear;
+        & p {
+            animation: fadeIn 0.5s linear;
+            padding: 20px 10px 10px 10px;
+        }
+    }
+
+    &__button {
+        height: 14px;
+        cursor: pointer;
+    }
+    &__up {
+        transform: rotate(0deg);
+        transition: all 0.5s ease-out;
+    }
+    &__down {
+        transform: rotate(-180deg);
+        transition: all 0.5s ease-out;
+    }
+}
