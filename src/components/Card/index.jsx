@@ -1,11 +1,11 @@
 import React from "react";
+// Importer le composant "Link" de react-router-dom
 import { Link } from "react-router-dom";
 
 const Card = (props) => {
-    // const styleCard = {
-    //     linearGradient: `(190deg, #fa7c30 30%, rgba(0, 0, 0, 0)30%), url(${props.logement.cover}`,
-    // };
+
     return (
+        // Créer un lien vers une page en utilisant "Link"
         <Link to={`fichelogement/${props.logement.id}`}>
             <div className="card">
                 <img
