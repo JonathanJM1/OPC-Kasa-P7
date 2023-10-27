@@ -1,18 +1,19 @@
 import React from "react";
 
-//import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import leftArrow from "../../assets/leftArrow.png";
 import rightArrow from "../../assets/rightArrow.png";
 
-const Slideshow2 = (props) => {
+const SlideShow = (props) => {
+    // Utiliser l'état local pour suivre l'image actuelle
     const [currentImage, setCurrentImage] = React.useState(0);
     const slidesLenght = props.imagesUrl.length;
 
+// Des bulles indicateurs (les "●" sous les images)
     const toggleBullet = (indexPic) => {
-        let bulletsArray = [];
+        let bulletsImg = [];
         for (let i = 0; i < slidesLenght; i++) {
-            bulletsArray = [
-                ...bulletsArray,
+            bulletsImg = [
+                ...bulletsImg,
                 <li
                     key={i}
                     className={
@@ -25,7 +26,7 @@ const Slideshow2 = (props) => {
                 </li>,
             ];
         }
-        return bulletsArray;
+        return bulletsImg;
     };
 
     const nextSlide = () => {
@@ -45,7 +46,7 @@ const Slideshow2 = (props) => {
             <div
                 className="slidecontainer__element"
                 style={{
-                    transform: `translate3d(${-currentImage * 100}%, 0, 0)`,
+                    transform: `translateX(${-currentImage * 100}%)` 
                 }}
             >
                 {props.imagesUrl.map((url, index) => (
@@ -77,4 +78,4 @@ const Slideshow2 = (props) => {
     );
 };
 
-export default Slideshow2;
+export default SlideShow;
