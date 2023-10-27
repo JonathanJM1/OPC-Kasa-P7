@@ -9,13 +9,12 @@ function Collapse(props) {
   let content = props.content;
   if (props.title === "Equipements") {
     content = props.content.map((equipement, index) => (
-      // Utiliser un attribut "key" unique pour chaque élément de la liste
       <li key={index}>{equipement}</li>
     ));
   }
 
-  // Gérer le clic pour basculer l'état du "collapse"
   function handleClick() {
+     // Inverser la valeur de l'état "collapse" (ouvert/fermé)
     setCollapse((prevCollapse) => !prevCollapse);
   }
 
@@ -44,3 +43,4 @@ function Collapse(props) {
 }
 
 export default Collapse;
+
